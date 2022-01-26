@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home</title>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <nav>
+      <span>Speecher</span>
+      <button id="change-theme">🌞</button>
+    </nav>
+    <main>
+      <div class="content">
+        <div class="controls">
+          <div class="textarea">
+            <span>Ingles</span>
+            <textarea
+              placeholder="Escriba aqui..."
+              name="text"
+              id="text"
+              cols="30"
+              rows="10"
+            ></textarea>
+          </div>
+          <!-- <button id="btn-go">Go</button> -->
+        </div>
+        <div class="words-container">
+          <h3 id="words-title"></h3>
+          <div class="words"></div>
+        </div>
+      </div>
+    </main>
+    <script type="module" src="./js/index.js"></script>
+  </body>
+</html>

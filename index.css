@@ -1,0 +1,79 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Lucida Sans Unicode";
+}
+nav {
+  display: flex;
+  align-items: center;
+  padding: 0 1rem;
+  box-shadow: 0 0 6px gray;
+  height: 5rem;
+}
+nav span {
+  font-size: 2rem;
+}
+main {
+  margin: 1rem;
+}
+.textarea {
+  display: flex;
+  /* align-items: flex-start; */
+  flex-direction: column;
+  border-radius: 0.5rem;
+  box-shadow: 0 0 6px gray;
+}
+
+.textarea span {
+  font-weight: bold;
+  border-bottom: 1px gray solid;
+  color: #1a73e8;
+  padding: 0.5rem;
+}
+#text {
+  outline: none;
+  border: none;
+  resize: none;
+  padding: 0.5rem;
+  margin: 0.5rem;
+}
+.content {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  /* align-items: flex-start; */
+  gap: 0.5rem;
+}
+
+.words {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+  gap: 0.5rem;
+}
+.word {
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  border-radius: 0.25rem;
+  background-color: rgb(238, 238, 238);
+}
+.clicked {
+  box-shadow: 0 0 6px gray;
+}
+.controls {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.controls button {
+  margin-top: 0.5rem;
+  width: 5rem;
+}
+@media (max-width: 800px) {
+  .content {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 3fr;
+  }
+  body {
+    /* background-color: red; */
+  }
+}
