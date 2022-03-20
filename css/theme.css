@@ -1,0 +1,11 @@
+#change-theme {
+  border: none;
+  font-size: 2rem;
+  background: none;
+  cursor: pointer;
+
+  transition: all 0.5s;
+}
+#change-theme:hover {
+  transform: scale(0.7);
+}

@@ -3,34 +3,53 @@
   padding: 0;
   font-family: "Lucida Sans Unicode";
 }
+:root {
+  --bg-color: #222;
+  --text-color: white;
+  --nav-bg: #333;
+  --bg-darker: #222;
+  --shadow: gray;
+}
+body {
+  color: var(--text-color);
+  background-color: var(--bg-color);
+}
 nav {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   padding: 0 1rem;
-  box-shadow: 0 0 6px gray;
+  background-color: var(--nav-bg);
+  border-bottom: 1px solid var(--shadow);
+  /* box-shadow: 0 0 6px var(--shadow); */
   height: 5rem;
 }
-nav span {
+
+nav span.brand {
   font-size: 2rem;
 }
 main {
+  height: 100vh;
   margin: 1rem;
 }
 .textarea {
   display: flex;
   /* align-items: flex-start; */
   flex-direction: column;
+  background-color: var(--nav-bg);
   border-radius: 0.5rem;
-  box-shadow: 0 0 6px gray;
+  border: 1px solid var(--shadow);
+  /* box-shadow: 0 0 6px var(--shadow); */
 }
 
 .textarea span {
   font-weight: bold;
   border-bottom: 1px gray solid;
-  color: #1a73e8;
   padding: 0.5rem;
 }
 #text {
+  color: var(--text-color);
+  background-color: var(--nav-bg);
   outline: none;
   border: none;
   resize: none;
@@ -53,11 +72,15 @@ main {
   display: grid;
   place-items: center;
   cursor: pointer;
+  background-color: var(--nav-bg);
+  color: var(--text-color);
+  transition: all 0.5s;
   border-radius: 0.25rem;
-  background-color: rgb(238, 238, 238);
+  border: 0.25px solid var(--shadow);
 }
 .clicked {
-  box-shadow: 0 0 6px gray;
+  color: var(--bg-color);
+  background-color: var(--text-color);
 }
 .controls {
   display: flex;
@@ -68,6 +91,9 @@ main {
   margin-top: 0.5rem;
   width: 5rem;
 }
+a {
+  color: var(--text-color);
+}
 @media (max-width: 800px) {
   .content {
     grid-template-columns: 1fr;
@@ -76,4 +102,11 @@ main {
   body {
     /* background-color: red; */
   }
+}
+footer {
+  display: flex;
+  justify-content: center;
+  padding: 1rem;
+  align-items: center;
+  flex-direction: column;
 }
